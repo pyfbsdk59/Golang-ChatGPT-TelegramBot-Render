@@ -12,6 +12,7 @@ import (
 )
 
 func getChatGPTresponse(ctx context.Context, question string) string {
+
 	c := gogpt.NewClient(os.Getenv("OPENAI_TOKEN"))
 
 	maxtokens, err0 := strconv.Atoi(os.Getenv("OPENAI_MAXTOKENS"))
@@ -38,6 +39,42 @@ func getChatGPTresponse(ctx context.Context, question string) string {
 
 }
 
+/*
+func main() {
+	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELEGRAM_BOT_TOKEN"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	bot.Debug = true
+
+	log.Printf("Authorized on account %s", bot.Self.UserName)
+
+	wh, _ := tgbotapi.NewWebhookWithCert("https://www.example.com:8443/"+bot.Token, "cert.pem")
+
+	_, err = bot.Request(wh)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	info, err := bot.GetWebhookInfo()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if info.LastErrorDate != 0 {
+		log.Printf("Telegram callback failed: %s", info.LastErrorMessage)
+	}
+
+	updates := bot.ListenForWebhook("/" + bot.Token)
+	go http.ListenAndServeTLS("0.0.0.0:8443", "cert.pem", "key.pem", nil)
+
+	for update := range updates {
+		log.Printf("%+v\n", update)
+	}
+}
+*/
+
 func main() {
 	ctx := context.Background()
 	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELEGRAM_BOT_TOKEN"))
@@ -50,7 +87,7 @@ func main() {
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	u := tgbotapi.NewUpdate(0)
-	u.Timeout = 60
+	u.Timeout = 30
 
 	updates := bot.GetUpdatesChan(u)
 
