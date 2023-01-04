@@ -3,26 +3,16 @@ package main
 import (
 	"log"
 	"os"
-	"time"
 
-	tele "gopkg.in/telebot.v3"
+	"github.com/yanzay/tbot/v2"
 )
 
 func main() {
-	pref := tele.Settings{
-		Token:  os.Getenv("TELEGRAM_BOT_TOKEN"),
-		Poller: &tele.LongPoller{Timeout: 10 * time.Second},
-	}
-
-	b, err := tele.NewBot(pref)
-	if err != nil {
-		log.Fatal(err)
-		return
-	}
-
-	b.Handle("/hello", func(c tele.Context) error {
-		return c.Send("Hello!Hello!There!")
+	bot := tbot.New(os.Getenv("TELEGRAM_TOKEN"),
+		tbot.WithWebhook("https://chatgpt-telebot.onrender.com", ":8080"))
+	c := bot.Client()
+	bot.HandleMessage("ping", func(m *tbot.Message) {
+		c.SendMessage(m.Chat.ID, "pong")
 	})
-
-	b.Start()
+	log.Fatal(bot.Start())
 }
