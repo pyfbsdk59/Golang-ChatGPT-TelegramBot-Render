@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	bot := tbot.New(os.Getenv("TELEGRAM_TOKEN"),
+	bot := tbot.New(os.Getenv("TELEGRAM_BOT_TOKEN"),
 		tbot.WithWebhook("https://chatgpt-telebot.onrender.com", ":8080"))
 	c := bot.Client()
 	bot.HandleMessage("ping", func(m *tbot.Message) {
