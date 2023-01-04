@@ -9,6 +9,7 @@
 #### 1. 本專案參考了以下前輩和官方的方案改成製作：
 https://github.com/kkdai/chatgpt<br>
 https://github.com/go-telegram-bot-api/telegram-bot-api<br>
+https://github.com/sashabaranov/go-gpt3
 
 
 #### 2. 請先fork本專案到自己的Github帳號裡。然後前往Render網站中設定，選擇新增「Web Services」，可用Github帳號匯入此專案，然後設定自己的名稱和選擇免費free方案。記得按下方「Advanced」，設定環境變數。

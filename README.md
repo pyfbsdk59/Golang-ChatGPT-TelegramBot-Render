@@ -10,6 +10,7 @@
 #### 1. This project refers to the following ones and official docs below.
 https://github.com/kkdai/chatgpt<br>
 https://github.com/go-telegram-bot-api/telegram-bot-api<br>
+https://github.com/sashabaranov/go-gpt3
 
 #### 2. Please fork this project to your own Github account first. Go to Render website, choose to add "Web Services", import this project with your Github account, and then set your own project name and choose a free plan. Remember to click "Advanced" below to set the environment variables.
 
