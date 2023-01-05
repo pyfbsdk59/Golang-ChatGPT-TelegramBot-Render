@@ -5,6 +5,14 @@
 ### [English](https://github.com/pyfbsdk59/Golang-ChatGPT-TelegramBot-Render/blob/main/README.md)
 ### [日本語](https://github.com/pyfbsdk59/Golang-ChatGPT-TelegramBot-Render/blob/main/README_jp.md)
 
+#### 範例
+
+<div align="center">
+  <img src="demo/photo_2023-01-05_08-42-47.jpg" width="300"/>
+  <img src="demo/photo_2023-01-05_08-42-49.jpg" width="300"/>
+</div>
+
+
 
 #### 1. 本專案參考了以下前輩和官方的方案改成製作：
 https://github.com/kkdai/chatgpt<br>

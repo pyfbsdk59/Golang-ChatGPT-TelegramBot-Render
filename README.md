@@ -7,6 +7,14 @@
 ### [日本語](https://github.com/pyfbsdk59/Golang-ChatGPT-TelegramBot-Render/blob/main/README_jp.md)
 
 
+#### Demo
+
+<div align="center">
+  <img src="demo/photo_2023-01-05_08-42-47.jpg" width="300"/>
+  <img src="demo/photo_2023-01-05_08-42-49.jpg" width="300"/>
+</div>
+
+
 #### 1. This project refers to the following ones and official docs below.
 https://github.com/kkdai/chatgpt<br>
 https://github.com/yanzay/tbot<br>
