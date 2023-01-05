@@ -1,2 +1,4 @@
+github.com/sashabaranov/go-gpt3 v0.0.0-20230103131550-2c55a49a3495 h1:63bAXFDM1WLpwFh73JO/rnTBU6dTNI+fr8W9Zmdm9wI=
+github.com/sashabaranov/go-gpt3 v0.0.0-20230103131550-2c55a49a3495/go.mod h1:BIZdbwdzxZbCrcKGMGH6u2eyGe1xFuX9Anmh3tCP8lQ=
 github.com/yanzay/tbot/v2 v2.2.0 h1:bK1+XTwY59IskXpwtHc/ItfU2uELTTqYP3pajfBaPeM=
 github.com/yanzay/tbot/v2 v2.2.0/go.mod h1:q0+8JblBq9tLAnKHdBIZsHwDvMS9TfO6mNfaAk1VrHg=
