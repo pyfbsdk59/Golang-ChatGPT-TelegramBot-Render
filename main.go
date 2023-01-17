@@ -44,7 +44,7 @@ func main() {
 		tbot.WithWebhook("", ":8080"))
 	c := bot.Client() //Please add your Render URL between "". 請在引號中加入你的Render網址
 
-	bot.HandleMessage(".*human:*", func(m *tbot.Message) { //The AI must be triggered by the keyword "humans:"
+	bot.HandleMessage(".*human:*", func(m *tbot.Message) { //The AI must be triggered by the keyword "human:"
 		c.SendMessage(m.Chat.ID, "AI:"+getChatGPTresponse(ctx, m.Text)) //m.Text represents the text you typed in 代表你打的文字
 	})
 	log.Fatal(bot.Start())
